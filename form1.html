@@ -1,0 +1,76 @@
+<html>
+<head>
+<style>
+align1{
+margin:0;
+right:10px;
+}
+</style>
+<script>
+function validateForm() {
+    var x = document.forms["myForm"]["fname"].value;
+    if (x.length<5 || x.length>12) {
+        alert("Please enter the values between 5 and 12");
+        return false;
+        var x1 = document.forms["myForm"]["f1name"].value;
+        if(x1.length<7 || x1.length>12) {
+        alert("Please enter the values between 7 and 12")
+        return false;
+    }
+}
+</script>
+
+</head>
+<body>
+<h1> REGISTRATION FORM </h1>
+<br>
+
+<form name="myForm" action="/action_page.php"
+onsubmit="return validateForm()" method="post">
+UserID: <input type="text" name="fname" required>
+<br>
+ <br>
+Password:
+  <input type="password" name="f1name" required>
+  <br> <br>
+  Name: 
+  <input type="text" name="f2name">
+<br> 
+<br>
+Address:
+  <input type="text" name="f3name"> 
+  <br> <br>
+  Country:
+ <select>
+  <option value="Asia">asia</option>
+  <option value="France">france</option>
+  <option value="India">india</option>
+  <option value="Japan">japan</option>
+</select>
+<br> <br>
+ZIP code: 
+ <input type="text" name="f4name">
+ <br> <br>
+ Email address:
+ <input type="text" name"f5name">
+ <br> <br>
+ Sex:
+ <input type="radio" name="gender" value="male"> Male 
+  <input type="radio" name="gender" value="female"> Female <br> <br>
+  Language:
+ <input type="checkbox" name="English" value="English"> English
+  <input type="checkbox" name="Non-English" value="Non-English"> Non-English
+  <br> <br>
+  About:<br>
+  <textarea rows="10" cols="20">
+  </textarea>
+ <br>
+<input type="submit" value="Submit"
+onsubmit="return validateForm()" method="post" >
+
+
+
+
+</form>
+</body>
+</html>
